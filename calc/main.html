@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <script>
+        function fu(temp1,temp2,temp3){
+            temp1=Number(temp1);
+            temp2=Number(temp2);
+            if(temp3=="+"){
+                return(temp1+temp2);
+            }
+            if(temp3=="-"){
+                return(temp1-temp2);
+            }
+            if(temp3=="*"){
+                return(temp1*temp2);
+            }
+            if(temp3=="/"){
+                return(temp1/temp2);
+            }
+        }
+
+        function disp(temp1,temp2,temp3){
+            document.getElementById("res").value=fu(temp1,temp2,temp3);
+        }
+    </script>
+
+</head>
+
+<body>
+    <div>
+        bil 1
+        <input type="number" id="temp1"/>
+    </div>
+    <br>
+    <div>
+        bil 2
+        <input type="number" id="temp2"/>
+    </div>
+    <br>
+    <div>
+        hasil
+        <input type="text" id="res" readonly/>
+    </div>
+
+    <br>
+
+    <button type="button" style="width:100px;height:100px"
+        onclick='disp(
+        document.getElementById("temp1").value,
+        document.getElementById("temp2").value,
+        "+"
+        )'>+</button>
+
+
+    <button type="button" style="width:100px;height:100px"
+    onclick='disp(
+        document.getElementById("temp1").value,
+        document.getElementById("temp2").value,
+        "-"
+        )'>-</button>
+
+
+    <button type="button" style="width:100px;height:100px"
+        onclick='disp(
+        document.getElementById("temp1").value,
+        document.getElementById("temp2").value,
+        "*"
+        )'>*</button>
+
+    <button type="button" style="width:100px;height:100px"
+    onclick='disp(
+        document.getElementById("temp1").value,
+        document.getElementById("temp2").value,
+        "/"
+        )'>/</button>
+</body>
+
+</html>

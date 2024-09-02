@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <script>
+        function fu(temp){
+            if(temp>=0&&temp<=40){
+                return "e";
+            }
+            if(temp>=41&&temp<=55){
+                return "d";
+            }
+            if(temp>=56&&temp<=70){
+                return "c";
+            }
+            if(temp>=71&&temp<=80){
+                return "b";
+            }
+            if(temp>=81&&temp<=100){
+                return "a";
+            }
+        }
+
+        function disp(temp){
+            document.getElementById("res").value=fu(temp);
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <input type="number" id="temp" placeholder="nomor" />
+
+    <button type="button"
+        onclick='disp(document.getElementById("temp").value)'>konversi</button>
+    <br><br>
+    <input type="text" id="res" readonly placeholder="hasil"/>
+
+</body>
+
+</html>
